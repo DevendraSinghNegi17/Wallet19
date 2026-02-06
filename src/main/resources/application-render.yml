@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: postgresql://walletdb_j2f3_user:K7SHI1yGOzbLOC0WMegA6GmSMMSWoO9i@dpg-d633nv4r85hc73f0ijq0-a/walletdb_j2f3
+    username: walletdb_j2f3_user
+    password: K7SHI1yGOzbLOC0WMegA6GmSMMSWoO9i
     driver-class-name: org.postgresql.Driver
 
     hikari:
