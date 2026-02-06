@@ -1,0 +1,4 @@
+com\game\wallet\service\WalletServiceIntegrationTest.class
+com\game\wallet\service\LedgerReplayServiceTest.class
+com\game\wallet\service\WalletServiceTest.class
+com\game\wallet\controller\WalletControllerTest.class

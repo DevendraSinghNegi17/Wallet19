@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 300000
+      max-lifetime: 900000
+      pool-name: WalletHikariPoolProd
+      auto-commit: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    root: INFO
+    com.game.wallet: INFO
