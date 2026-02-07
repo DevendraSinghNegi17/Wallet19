@@ -1,0 +1,5539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.game.wallet.service.WalletServiceIntegrationTest" time="11.71" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="S:\GameWallet\wallet-service\target\test-classes;S:\GameWallet\wallet-service\target\classes;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.10\spring-boot-starter-web-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.10\spring-boot-starter-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot\3.5.10\spring-boot-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.10\spring-boot-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.10\spring-boot-starter-logging-3.5.10.jar;C:\Users\deven\.m2\repository\ch\qos\logback\logback-classic\1.5.25\logback-classic-1.5.25.jar;C:\Users\deven\.m2\repository\ch\qos\logback\logback-core\1.5.25\logback-core-1.5.25.jar;C:\Users\deven\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\deven\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\deven\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\deven\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\deven\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.10\spring-boot-starter-json-3.5.10.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.4\jackson-databind-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.4\jackson-annotations-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.4\jackson-core-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.4\jackson-datatype-jdk8-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.4\jackson-datatype-jsr310-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.4\jackson-module-parameter-names-2.19.4.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.10\spring-boot-starter-tomcat-3.5.10.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.50\tomcat-embed-core-10.1.50.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.50\tomcat-embed-websocket-10.1.50.jar;C:\Users\deven\.m2\repository\org\springframework\spring-web\6.2.15\spring-web-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-beans\6.2.15\spring-beans-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-webmvc\6.2.15\spring-webmvc-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-aop\6.2.15\spring-aop-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-context\6.2.15\spring-context-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-expression\6.2.15\spring-expression-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.10\spring-boot-starter-data-jpa-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.10\spring-boot-starter-jdbc-3.5.10.jar;C:\Users\deven\.m2\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar;C:\Users\deven\.m2\repository\org\springframework\spring-jdbc\6.2.15\spring-jdbc-6.2.15.jar;C:\Users\deven\.m2\repository\org\hibernate\orm\hibernate-core\6.6.41.Final\hibernate-core-6.6.41.Final.jar;C:\Users\deven\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\deven\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\deven\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\deven\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\deven\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\deven\.m2\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar;C:\Users\deven\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\deven\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\deven\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\deven\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\deven\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\deven\.m2\repository\org\springframework\data\spring-data-jpa\3.5.8\spring-data-jpa-3.5.8.jar;C:\Users\deven\.m2\repository\org\springframework\data\spring-data-commons\3.5.8\spring-data-commons-3.5.8.jar;C:\Users\deven\.m2\repository\org\springframework\spring-orm\6.2.15\spring-orm-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-tx\6.2.15\spring-tx-6.2.15.jar;C:\Users\deven\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.10\spring-boot-starter-validation-3.5.10.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.50\tomcat-embed-el-10.1.50.jar;C:\Users\deven\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar;C:\Users\deven\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\deven\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\deven\.m2\repository\org\springframework\spring-aspects\6.2.15\spring-aspects-6.2.15.jar;C:\Users\deven\.m2\repository\org\aspectj\aspectjweaver\1.9.25.1\aspectjweaver-1.9.25.1.jar;C:\Users\deven\.m2\repository\org\postgresql\postgresql\42.7.9\postgresql-42.7.9.jar;C:\Users\deven\.m2\repository\org\checkerframework\checker-qual\3.52.0\checker-qual-3.52.0.jar;C:\Users\deven\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.8.0\springdoc-openapi-starter-webmvc-ui-2.8.0.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.8.0\springdoc-openapi-starter-webmvc-api-2.8.0.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.8.0\springdoc-openapi-starter-common-2.8.0.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.27\swagger-core-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.27\swagger-annotations-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.27\swagger-models-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.19.4\jackson-dataformat-yaml-2.19.4.jar;C:\Users\deven\.m2\repository\org\webjars\swagger-ui\5.18.2\swagger-ui-5.18.2.jar;C:\Users\deven\.m2\repository\org\webjars\webjars-locator-lite\1.1.3\webjars-locator-lite-1.1.3.jar;C:\Users\deven\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.5.10\spring-boot-starter-actuator-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.5.10\spring-boot-actuator-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-actuator\3.5.10\spring-boot-actuator-3.5.10.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-observation\1.15.8\micrometer-observation-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-commons\1.15.8\micrometer-commons-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-jakarta9\1.15.8\micrometer-jakarta9-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-core\1.15.8\micrometer-core-1.15.8.jar;C:\Users\deven\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\deven\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.10\spring-boot-starter-test-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-test\3.5.10\spring-boot-test-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.10\spring-boot-test-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\deven\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\deven\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\deven\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\deven\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\deven\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\deven\.m2\repository\org\assertj\assertj-core\3.27.6\assertj-core-3.27.6.jar;C:\Users\deven\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\deven\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\deven\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\deven\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\deven\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\deven\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\deven\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\deven\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\deven\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\deven\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\deven\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\deven\.m2\repository\org\springframework\spring-core\6.2.15\spring-core-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-jcl\6.2.15\spring-jcl-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-test\6.2.15\spring-test-6.2.15.jar;C:\Users\deven\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;C:\Users\deven\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\deven\AppData\Local\Temp\surefire17456385476550937521\surefirebooter-20260207101336587_3.jar C:\Users\deven\AppData\Local\Temp\surefire17456385476550937521 2026-02-07T10-13-36_420-jvmRun1 surefire-20260207101336587_1tmp surefire_0-20260207101336587_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="S:\GameWallet\wallet-service\target\test-classes;S:\GameWallet\wallet-service\target\classes;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.10\spring-boot-starter-web-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.10\spring-boot-starter-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot\3.5.10\spring-boot-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.10\spring-boot-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.10\spring-boot-starter-logging-3.5.10.jar;C:\Users\deven\.m2\repository\ch\qos\logback\logback-classic\1.5.25\logback-classic-1.5.25.jar;C:\Users\deven\.m2\repository\ch\qos\logback\logback-core\1.5.25\logback-core-1.5.25.jar;C:\Users\deven\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\deven\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\deven\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\deven\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\deven\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.10\spring-boot-starter-json-3.5.10.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.4\jackson-databind-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.4\jackson-annotations-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.4\jackson-core-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.4\jackson-datatype-jdk8-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.4\jackson-datatype-jsr310-2.19.4.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.4\jackson-module-parameter-names-2.19.4.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.10\spring-boot-starter-tomcat-3.5.10.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.50\tomcat-embed-core-10.1.50.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.50\tomcat-embed-websocket-10.1.50.jar;C:\Users\deven\.m2\repository\org\springframework\spring-web\6.2.15\spring-web-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-beans\6.2.15\spring-beans-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-webmvc\6.2.15\spring-webmvc-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-aop\6.2.15\spring-aop-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-context\6.2.15\spring-context-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-expression\6.2.15\spring-expression-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.10\spring-boot-starter-data-jpa-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.10\spring-boot-starter-jdbc-3.5.10.jar;C:\Users\deven\.m2\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar;C:\Users\deven\.m2\repository\org\springframework\spring-jdbc\6.2.15\spring-jdbc-6.2.15.jar;C:\Users\deven\.m2\repository\org\hibernate\orm\hibernate-core\6.6.41.Final\hibernate-core-6.6.41.Final.jar;C:\Users\deven\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\deven\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\deven\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\deven\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\deven\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\deven\.m2\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar;C:\Users\deven\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\deven\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\deven\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\deven\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\deven\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\deven\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\deven\.m2\repository\org\springframework\data\spring-data-jpa\3.5.8\spring-data-jpa-3.5.8.jar;C:\Users\deven\.m2\repository\org\springframework\data\spring-data-commons\3.5.8\spring-data-commons-3.5.8.jar;C:\Users\deven\.m2\repository\org\springframework\spring-orm\6.2.15\spring-orm-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-tx\6.2.15\spring-tx-6.2.15.jar;C:\Users\deven\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.10\spring-boot-starter-validation-3.5.10.jar;C:\Users\deven\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.50\tomcat-embed-el-10.1.50.jar;C:\Users\deven\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar;C:\Users\deven\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\deven\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\deven\.m2\repository\org\springframework\spring-aspects\6.2.15\spring-aspects-6.2.15.jar;C:\Users\deven\.m2\repository\org\aspectj\aspectjweaver\1.9.25.1\aspectjweaver-1.9.25.1.jar;C:\Users\deven\.m2\repository\org\postgresql\postgresql\42.7.9\postgresql-42.7.9.jar;C:\Users\deven\.m2\repository\org\checkerframework\checker-qual\3.52.0\checker-qual-3.52.0.jar;C:\Users\deven\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.8.0\springdoc-openapi-starter-webmvc-ui-2.8.0.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.8.0\springdoc-openapi-starter-webmvc-api-2.8.0.jar;C:\Users\deven\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.8.0\springdoc-openapi-starter-common-2.8.0.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.27\swagger-core-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.27\swagger-annotations-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.27\swagger-models-jakarta-2.2.27.jar;C:\Users\deven\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.19.4\jackson-dataformat-yaml-2.19.4.jar;C:\Users\deven\.m2\repository\org\webjars\swagger-ui\5.18.2\swagger-ui-5.18.2.jar;C:\Users\deven\.m2\repository\org\webjars\webjars-locator-lite\1.1.3\webjars-locator-lite-1.1.3.jar;C:\Users\deven\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.5.10\spring-boot-starter-actuator-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.5.10\spring-boot-actuator-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-actuator\3.5.10\spring-boot-actuator-3.5.10.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-observation\1.15.8\micrometer-observation-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-commons\1.15.8\micrometer-commons-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-jakarta9\1.15.8\micrometer-jakarta9-1.15.8.jar;C:\Users\deven\.m2\repository\io\micrometer\micrometer-core\1.15.8\micrometer-core-1.15.8.jar;C:\Users\deven\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\deven\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.10\spring-boot-starter-test-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-test\3.5.10\spring-boot-test-3.5.10.jar;C:\Users\deven\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.10\spring-boot-test-autoconfigure-3.5.10.jar;C:\Users\deven\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\deven\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\deven\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\deven\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\deven\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\deven\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\deven\.m2\repository\org\assertj\assertj-core\3.27.6\assertj-core-3.27.6.jar;C:\Users\deven\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\deven\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\deven\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\deven\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\deven\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\deven\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\deven\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\deven\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\deven\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\deven\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\deven\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\deven\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\deven\.m2\repository\org\springframework\spring-core\6.2.15\spring-core-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-jcl\6.2.15\spring-jcl-6.2.15.jar;C:\Users\deven\.m2\repository\org\springframework\spring-test\6.2.15\spring-test-6.2.15.jar;C:\Users\deven\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;C:\Users\deven\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\deven"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="S:\GameWallet\wallet-service"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\deven\AppData\Local\Temp\surefire17456385476550937521\surefirebooter-20260207101336587_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
+    <property name="user.name" value="deven"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\deven\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\deven\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="S:\GameWallet\wallet-service"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="3324"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\deven\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\deven\AppData\Local\Programs\Python\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\deven\AppData\Local\Microsoft\WindowsApps;C:\Users\deven\go\bin;C:\Users\deven\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\Go\bin;C:\Users\deven\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.2.6.1\bin;C:\Program Files\apache-maven-3.9.12\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS-69"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testConcurrentSpends" classname="WalletService Integration Tests" time="1.77">
+    <system-out><![CDATA[2026-02-07T10:13:43.193+05:30  INFO 3324 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.game.wallet.service.WalletServiceIntegrationTest]: WalletServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-07T10:13:43.358+05:30  INFO 3324 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.game.wallet.WalletApplication for test class com.game.wallet.service.WalletServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-07T10:13:43.419+05:30  INFO 3324 --- [           main] c.g.w.s.WalletServiceIntegrationTest     : Starting WalletServiceIntegrationTest using Java 25.0.2 with PID 3324 (started by deven in S:\GameWallet\wallet-service)
+2026-02-07T10:13:43.420+05:30 DEBUG 3324 --- [           main] c.g.w.s.WalletServiceIntegrationTest     : Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-02-07T10:13:43.420+05:30  INFO 3324 --- [           main] c.g.w.s.WalletServiceIntegrationTest     : The following 1 profile is active: "test"
+2026-02-07T10:13:44.461+05:30  INFO 3324 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-07T10:13:44.536+05:30  INFO 3324 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2026-02-07T10:13:44.887+05:30  INFO 3324 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-07T10:13:45.009+05:30  INFO 3324 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.41.Final
+2026-02-07T10:13:45.084+05:30  INFO 3324 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-07T10:13:45.338+05:30  INFO 3324 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-07T10:13:45.390+05:30  INFO 3324 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-07T10:13:45.669+05:30  INFO 3324 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-07T10:13:45.673+05:30  INFO 3324 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-07T10:13:45.713+05:30  WARN 3324 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-07T10:13:45.744+05:30  INFO 3324 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-07T10:13:46.739+05:30  INFO 3324 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-07T10:13:46.755+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists asset cascade 
+Hibernate: 
+    drop table if exists asset cascade 
+2026-02-07T10:13:46.759+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists idempotency_key cascade 
+Hibernate: 
+    drop table if exists idempotency_key cascade 
+2026-02-07T10:13:46.759+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists ledger_entry cascade 
+Hibernate: 
+    drop table if exists ledger_entry cascade 
+2026-02-07T10:13:46.760+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists wallet cascade 
+Hibernate: 
+    drop table if exists wallet cascade 
+2026-02-07T10:13:46.769+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create table asset (
+        limited_supply boolean not null,
+        code varchar(20) not null,
+        primary key (code)
+    )
+Hibernate: 
+    create table asset (
+        limited_supply boolean not null,
+        code varchar(20) not null,
+        primary key (code)
+    )
+2026-02-07T10:13:46.780+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create table idempotency_key (
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        operation varchar(50) not null,
+        idempotency_key varchar(255) not null,
+        primary key (id),
+        constraint uk_idempotency_key_operation unique (idempotency_key, operation)
+    )
+Hibernate: 
+    create table idempotency_key (
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        operation varchar(50) not null,
+        idempotency_key varchar(255) not null,
+        primary key (id),
+        constraint uk_idempotency_key_operation unique (idempotency_key, operation)
+    )
+2026-02-07T10:13:46.799+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create table ledger_entry (
+        amount bigint not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        asset varchar(20) not null,
+        credit_user varchar(100) not null,
+        debit_user varchar(100) not null,
+        reference varchar(500),
+        idempotency_key varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table ledger_entry (
+        amount bigint not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        asset varchar(20) not null,
+        credit_user varchar(100) not null,
+        debit_user varchar(100) not null,
+        reference varchar(500),
+        idempotency_key varchar(255) not null,
+        primary key (id)
+    )
+2026-02-07T10:13:46.801+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create table wallet (
+        balance bigint not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        asset varchar(20) not null,
+        user_id varchar(100) not null,
+        primary key (asset, user_id)
+    )
+Hibernate: 
+    create table wallet (
+        balance bigint not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        asset varchar(20) not null,
+        user_id varchar(100) not null,
+        primary key (asset, user_id)
+    )
+2026-02-07T10:13:46.802+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create index idx_ledger_idempotency 
+       on ledger_entry (idempotency_key)
+Hibernate: 
+    create index idx_ledger_idempotency 
+       on ledger_entry (idempotency_key)
+2026-02-07T10:13:46.802+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create index idx_ledger_debit_user 
+       on ledger_entry (debit_user)
+Hibernate: 
+    create index idx_ledger_debit_user 
+       on ledger_entry (debit_user)
+2026-02-07T10:13:46.803+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    create index idx_ledger_credit_user 
+       on ledger_entry (credit_user)
+Hibernate: 
+    create index idx_ledger_credit_user 
+       on ledger_entry (credit_user)
+2026-02-07T10:13:46.806+05:30  INFO 3324 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-07T10:13:47.272+05:30  INFO 3324 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-07T10:13:48.186+05:30  WARN 3324 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-07T10:13:49.057+05:30  INFO 3324 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-07T10:13:49.365+05:30  INFO 3324 --- [           main] c.g.w.s.WalletServiceIntegrationTest     : Started WalletServiceIntegrationTest in 5.999 seconds (process running for 12.632)
+2026-02-07T10:13:50.344+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:50.671+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:50.678+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:50.701+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:50.740+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:50.829+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:50.843+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:50.845+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:50.863+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:50.877+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:50.948+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:50.948+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:50.948+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:50.948+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:50.948+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:50.990+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:50.991+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:50.991+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:50.990+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:50.991+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.028+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.052+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.071+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.078+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:51.111+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:51.116+05:30 DEBUG 3324 --- [pool-3-thread-5] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.123+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.130+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.134+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.138+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:51.144+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:51.148+05:30 DEBUG 3324 --- [pool-3-thread-2] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.156+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.164+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.168+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.173+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:51.176+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:51.185+05:30 DEBUG 3324 --- [pool-3-thread-4] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.190+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.199+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.202+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.209+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:51.220+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:51.227+05:30 DEBUG 3324 --- [pool-3-thread-1] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.236+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.250+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.259+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:51.271+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:51.278+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:51.284+05:30 DEBUG 3324 --- [pool-3-thread-3] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.492+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+2026-02-07T10:13:51.502+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+]]></system-out>
+  </testcase>
+  <testcase name="testConcurrentTopUps" classname="WalletService Integration Tests" time="1.143">
+    <system-out><![CDATA[2026-02-07T10:13:51.587+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:51.620+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:51.625+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:51.628+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:51.630+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:51.633+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:51.639+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:51.653+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:51.657+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:51.660+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:51.665+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:51.667+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:51.686+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:51.709+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.720+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:51.753+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:51.781+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:51.785+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:51.828+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.855+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:51.865+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.875+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:51.892+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:51.908+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:51.985+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.986+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.986+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.958+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.988+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:51.992+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.989+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.003+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.004+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:51.995+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:52.007+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:52.007+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:52.007+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:52.009+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.009+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.011+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.013+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:52.014+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.016+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.019+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.020+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.016+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.022+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.023+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.026+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.025+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.030+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.034+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.037+05:30 DEBUG 3324 --- [pool-4-thread-4] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.077+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.079+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.079+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.078+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:52.080+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.082+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.082+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.084+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.084+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.087+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.093+05:30 DEBUG 3324 --- [pool-4-thread-2] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.106+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.116+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.129+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.139+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.143+05:30 DEBUG 3324 --- [pool-4-thread-5] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.165+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.172+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.193+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.202+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.206+05:30 DEBUG 3324 --- [pool-4-thread-3] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.221+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.226+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.249+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.255+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.261+05:30 DEBUG 3324 --- [ool-4-thread-10] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.275+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.279+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.285+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.290+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.297+05:30 DEBUG 3324 --- [pool-4-thread-6] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.306+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.308+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.315+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.321+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.327+05:30 DEBUG 3324 --- [pool-4-thread-8] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.335+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.339+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.343+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.347+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.350+05:30 DEBUG 3324 --- [pool-4-thread-7] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.358+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.360+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.366+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.370+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.373+05:30 DEBUG 3324 --- [pool-4-thread-9] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.380+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.383+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:52.392+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:52.396+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:52.402+05:30 DEBUG 3324 --- [pool-4-thread-1] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:52.414+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+2026-02-07T10:13:52.435+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+2026-02-07T10:13:52.659+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        ledger_entry le1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testUnlimitedSupplyAsset" classname="WalletService Integration Tests" time="0.664">
+    <system-out><![CDATA[2026-02-07T10:13:52.742+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:52.772+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.780+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.787+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.800+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.813+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.821+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.832+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.844+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.845+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.846+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:52.870+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:52.914+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.933+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.952+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.982+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.988+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.992+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:52.997+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.002+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.011+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.036+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.071+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:53.115+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.118+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.124+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:53.134+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:53.136+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:53.141+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.146+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:53.153+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.161+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:53.170+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:53.276+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:53.290+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:53.298+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:53.302+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.305+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:53.312+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:53.316+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:53.321+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.327+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:53.331+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:53.335+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.337+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:53.339+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:53.343+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.351+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+2026-02-07T10:13:53.358+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+]]></system-out>
+  </testcase>
+  <testcase name="testDuplicateIdempotencyKey" classname="WalletService Integration Tests" time="0.494">
+    <system-out><![CDATA[2026-02-07T10:13:53.389+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:53.399+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:53.404+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:53.417+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:53.426+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.433+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:53.444+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:53.456+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.462+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.466+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.472+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:53.477+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:53.482+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:53.487+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.492+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:53.498+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.501+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:53.510+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:53.520+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:53.701+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:53.750+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:53.766+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:53.779+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.785+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:53.796+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:53.805+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:53.809+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:53.825+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:53.851+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=?
+]]></system-out>
+  </testcase>
+  <testcase name="testLedgerEntries" classname="WalletService Integration Tests" time="0.727">
+    <system-out><![CDATA[2026-02-07T10:13:53.889+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:53.899+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:53.917+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:53.961+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:54.072+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:54.185+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.213+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.225+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:54.236+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:54.241+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:54.247+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.254+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:54.260+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.265+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:54.294+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:54.352+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:54.364+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:54.371+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.378+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.387+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.392+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.401+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:54.411+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:54.423+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.436+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:54.443+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.449+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.458+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.463+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.468+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:54.478+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:54.486+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.503+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:54.511+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.519+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.530+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.533+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+2026-02-07T10:13:54.547+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        ledger_entry
+        (amount, asset, created_at, credit_user, debit_user, idempotency_key, reference, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-02-07T10:13:54.554+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        idempotency_key
+        (created_at, idempotency_key, operation, id) 
+    values
+        (?, ?, ?, default)
+2026-02-07T10:13:54.562+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    update
+        wallet 
+    set
+        balance=?,
+        updated_at=?,
+        version=? 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.579+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        ledger_entry le1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testSpendMoreThanBalance" classname="WalletService Integration Tests" time="0.248">
+    <system-out><![CDATA[2026-02-07T10:13:54.637+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+Hibernate: 
+    select
+        ik1_0.id,
+        ik1_0.created_at,
+        ik1_0.idempotency_key,
+        ik1_0.operation 
+    from
+        idempotency_key ik1_0
+2026-02-07T10:13:54.648+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:54.650+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:54.654+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        idempotency_key 
+    where
+        id=?
+2026-02-07T10:13:54.671+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+Hibernate: 
+    select
+        le1_0.id,
+        le1_0.amount,
+        le1_0.asset,
+        le1_0.created_at,
+        le1_0.credit_user,
+        le1_0.debit_user,
+        le1_0.idempotency_key,
+        le1_0.reference 
+    from
+        ledger_entry le1_0
+2026-02-07T10:13:54.683+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:54.686+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:54.688+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        ledger_entry 
+    where
+        id=?
+2026-02-07T10:13:54.700+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0
+2026-02-07T10:13:54.715+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.718+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+Hibernate: 
+    delete 
+    from
+        wallet 
+    where
+        asset=? 
+        and user_id=? 
+        and version=?
+2026-02-07T10:13:54.733+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0
+2026-02-07T10:13:54.746+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:54.750+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        asset 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        asset 
+    where
+        code=?
+2026-02-07T10:13:54.754+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.762+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:54.766+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+Hibernate: 
+    select
+        a1_0.code,
+        a1_0.limited_supply 
+    from
+        asset a1_0 
+    where
+        a1_0.code=?
+2026-02-07T10:13:54.774+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        asset
+        (limited_supply, code) 
+    values
+        (?, ?)
+2026-02-07T10:13:54.780+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:54.788+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        wallet
+        (balance, created_at, updated_at, version, asset, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-07T10:13:54.804+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        ik1_0.id 
+    from
+        idempotency_key ik1_0 
+    where
+        ik1_0.idempotency_key=? 
+        and ik1_0.operation=? 
+    fetch
+        first ? rows only
+2026-02-07T10:13:54.813+05:30 DEBUG 3324 --- [           main] org.hibernate.SQL                        : 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+Hibernate: 
+    select
+        w1_0.asset,
+        w1_0.user_id,
+        w1_0.balance,
+        w1_0.created_at,
+        w1_0.updated_at,
+        w1_0.version 
+    from
+        wallet w1_0 
+    where
+        w1_0.user_id=? 
+        and w1_0.asset=? for update
+]]></system-out>
+  </testcase>
+</testsuite>
