@@ -1,4 +1,4 @@
-# Created at 2026-02-07T10:13:36.628
+# Created at 2026-02-07T11:02:06.026
 Boot Manifest-JAR contains absolute paths in classpath 'S:\GameWallet\wallet-service\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

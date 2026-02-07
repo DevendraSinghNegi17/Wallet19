@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.game.wallet.controller.WalletControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.090 s -- in com.game.wallet.controller.WalletControllerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.204 s -- in com.game.wallet.controller.WalletControllerTest
