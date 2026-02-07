@@ -53,9 +53,10 @@ Start the containers using the following command:
 
 ```
 docker-compose up --build
+FOR RUNNING IN DETACHED MODE: docker-compose up -d
 ```
 
-Docker Compose will pull the PostgreSQL image, create the database container, build the Spring Boot application, and start both services. The application will be available on port 8080.
+Docker Compose will pull the PostgreSQL image, create the databascleae container, build the Spring Boot application, and start both services. The application will be available on port 8080.
 
 On first startup, the database schema is created automatically by Hibernate. The data.sql script in src/main/resources runs immediately after to insert initial asset types and wallet data.
 
